@@ -13,7 +13,7 @@ function HomePage() {
     });
 
     useEffect(() => {
-        axios.get('https://www.omdbapi.com/?apikey=b5382e81&type=movie&s=spider')
+        axios.get('https://www.omdbapi.com/?apikey=2b0bb0aa&type=movie&s=spider')
             .then(res => {
                 setState(prevState => {
                     return { ...prevState, results: res.data.Search }
@@ -30,7 +30,7 @@ function HomePage() {
     }
 
     const openDetails = (id) => {
-        axios.get('https://www.omdbapi.com/?i=' + id + '&apikey=b5382e81')
+        axios.get('https://www.omdbapi.com/?i=' + id + '&apikey=2b0bb0aa')
             .then(({ data }) => {
                 setState((prevState) => {
                     return { ...prevState, selected: data }
@@ -41,7 +41,7 @@ function HomePage() {
 
     const SearchResult = (event) => {
         if (event.key === 'Enter') {
-            axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=b5382e81' + '&s=' + state.search)
+            axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=2b0bb0aa' + '&s=' + state.search)
                 .then(res => {
                     setState(prevState => {
                         return { ...prevState, results: res.data.Search }
@@ -50,7 +50,6 @@ function HomePage() {
                 .catch(err => console.log(err));
         }
     }
-
     const close = () => {
         setState((prevState) => {
             return { ...prevState, selected: {} }

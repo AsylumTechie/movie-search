@@ -17,5 +17,4 @@ function Result({ result, openDetails }) {
         </div>
     )
 }
-
 export default Result;

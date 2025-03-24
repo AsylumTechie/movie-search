@@ -1,5 +1,5 @@
 import React from 'react'
-// import './App.css'
+
 
 const Search = ({ handleInput, SearchResult }) => {
   return (
@@ -11,5 +11,4 @@ const Search = ({ handleInput, SearchResult }) => {
     </div>
   )
 }
-
 export default Search
